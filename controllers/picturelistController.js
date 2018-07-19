@@ -102,6 +102,7 @@ exports.picturelist_updateone_put =
 
 	(req, res, next) =>
 	{
+		console.log('IN PUT', req.body)
 	const validationerror = validationResult(req);
 
 	if (!validationerror.isEmpty())
@@ -115,6 +116,7 @@ exports.picturelist_updateone_put =
 		{ new : true }, // returns updated picture info
 		function(err2, res2)
 		{
+			console.log(err2)
 			//console.log("picturelist_updateone_put");
 			// jump away if error found
 			if (err2)
